@@ -1,7 +1,9 @@
 # hub-news-in-korea-ts (hub-news-in-korea-ts)
 
-quasar v2 with typescript
+sorting news in korea using quasar v2 with typescript
+## github ref
 
+https://github.com/AnJaeSeongS2/hub-news-in-korea-ts.git
 ## Install the dependencies
 ```bash
 yarn
