@@ -7,7 +7,7 @@ import {
 } from 'vuex';
 
 // import example from "./module-example"
-// import { ExampleStateInterface } from "./module-example/state";
+import { ExampleStateInterface } from './module-example/state';
 
 /*
  * If not building with SSR mode, you can
@@ -20,9 +20,9 @@ import {
 
 export interface StateInterface {
   // Define your own store structure, using submodules if needed
-  // example: ExampleStateInterface;
+  example: ExampleStateInterface;
   // Declared as unknown to avoid linting issue. Best to strongly type as per the line above.
-  example: unknown;
+  // example: unknown;
 }
 
 // provide typings for `this.$store`

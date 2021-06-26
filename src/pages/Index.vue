@@ -1,20 +1,15 @@
 <template>
-  <div>
-    <h1>hello</h1>
-  </div>
+  <news-table></news-table>
 </template>
 <script lang="ts">
-import Parser = require('rss-parser');
-const parser = new Parser();
-const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
+import { defineComponent } from 'vue';
+import NewsTable from './../layouts/NewsTable.vue';
 
-export default {
-  async created() {
-    const response = await parser.parseURL(
-      `${CORS_PROXY}https://bbs.ruliweb.com/best/humor/now?custom_list=best`
-    );
-    console.log(response);
+export default defineComponent({
+  name: 'router-view',
+  components: {
+    NewsTable,
   },
-};
+});
 </script>
 <style></style>

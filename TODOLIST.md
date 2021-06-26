@@ -14,4 +14,6 @@
 | 5    | https://jsonplaceholder.typicode.com 을 이용해 api test call을 할 수 있다. | DONE |   100% |       06-23 |  06-23 | 10m           |
 | 6    | typescript의 import/export 정책과 그에맞춰서 rss-parser를 정확히 import할 것 | DONE |   100% |       06-24 |  06-24 | 30m           |
 | 7    | prettier 적절히 적용 singlequote, semi to true 프로젝트 전체 변환. | DONE |   100% |       06-25 |  06-25 | 30m           |
+| 8    | font 가져오는 것은 fontawesome.com                           |      |        |             |        |               |
+| 9    |                                                              |      |        |             |        |               |
 
