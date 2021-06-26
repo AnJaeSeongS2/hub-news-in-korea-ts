@@ -4,9 +4,9 @@
   </div>
 </template>
 <script lang="ts">
-import Parser = require("rss-parser");
+import Parser = require('rss-parser');
 const parser = new Parser();
-const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
 
 export default {
   async created() {

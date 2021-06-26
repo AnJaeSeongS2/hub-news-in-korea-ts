@@ -12,7 +12,7 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#configuration
     // https://github.com/TypeStrong/fork-ts-checker-webpack-plugin#eslint
     // Needed to make the parser take into account 'vue' files
-    extraFileExtensions: ['.vue'],
+    extraFileExtensions: ['.vue', '.html'],
     parser: '@typescript-eslint/parser',
     project: resolve(__dirname, './tsconfig.json'),
     tsconfigRootDir: __dirname,
@@ -44,7 +44,9 @@ module.exports = {
 
     // https://github.com/prettier/eslint-config-prettier#installation
     // usage with Prettier, provided by 'eslint-config-prettier'.
-    'prettier'
+    'prettier',
+    'plugin:prettier/recommended',
+    'eslint:recommended',
   ],
 
   plugins: [
@@ -58,6 +60,7 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/issues/389#issuecomment-509292674
     // Prettier has not been included as plugin to avoid performance impact
     // add it as an extension for your IDE
+    'prettier',
   ],
 
   globals: {
@@ -76,11 +79,12 @@ module.exports = {
   // add your custom rules here
   rules: {
     'prefer-promise-reject-errors': 'off',
+    'prettier/prettier': 'error',
 
     // TypeScript
-    // quotes: ['warn', 'double', { avoidEscape: true }],
-    // '@typescript-eslint/explicit-function-return-type': 'off',
-    // '@typescript-eslint/explicit-module-boundary-types': 'off',
+    quotes: ['warn', 'single', { avoidEscape: true }],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
 
     // allow debugger during development only
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'

@@ -1,7 +1,33 @@
 {
-  "vetur.validation.template": false,
-  "vetur.format.enable": false,
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "vetur.experimental.templateInterpolationService": true
+  "terminal.integrated.tabs.enabled": true,
+  "git.autofetch": true,
+  "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "scssFormatter.singleQuote": true,
+  "vue3snippets.jsxSingleQuote": true,
+  "vue3snippets.singleQuote": true,
+  "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.defaultFormatter.html": "prettier",
+  "html.format.wrapAttributes": "force-aligned",
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.jsxSingleQuote": true,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "vue3snippets.enable-compile-vue-file-on-did-save-code": false,
+//   for vscode default formatter off
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.workingDirectories": [
+      {"mode": "auto"}
+  ],
+  "eslint.validate": [
+      "javascript",
+      "typescript",
+      "html",
+  ],
 }

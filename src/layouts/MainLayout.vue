@@ -2,7 +2,14 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
+        <q-btn
+          flat
+          dense
+          round
+          icon="menu"
+          aria-label="Menu"
+          @click="toggleLeftDrawer"
+        />
 
         <q-toolbar-title> 모두의 뉴스 </q-toolbar-title>
 
@@ -24,10 +31,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
-  name: "MainLayout",
+  name: 'MainLayout',
 
   components: {},
 
