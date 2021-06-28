@@ -1,19 +1,12 @@
 <template>
   <div>
-    <q-list bordered>
-      <q-item
-        class="text-h6 text-weight-medium"
-        clickable
-        v-ripple
-        v-for="news in newsList"
-        :key="news.guid"
-      >
-        <q-item-section>{{ news.title }}</q-item-section>
-        <q-item-section class="text-caption" side>{{
-          fromNow(news.pubDate)
-        }}</q-item-section>
-      </q-item>
-    </q-list>
+    <q-table
+      title="News(Tistorys) Table"
+      :rows="newsList"
+      :columns="columns"
+      :class="classObject"
+      row-key="guid"
+    />
   </div>
 </template>
 <script lang="ts">
@@ -28,9 +21,30 @@ moment.locale('ko-kr');
 
 export default defineComponent({
   name: 'news-table',
+  props: {},
   data() {
     return {
       newsList: [],
+      columns: [
+        {
+          name: 'title',
+          required: true,
+          label: 'Title',
+          align: 'left',
+          field: (row: any) => row.title,
+          format: (val: string) => `${val}`,
+          sortable: true,
+        },
+        {
+          name: 'pubDate',
+          required: true,
+          label: 'Published Date',
+          align: 'right',
+          field: (row: any) => row.pubDate,
+          format: (val: moment.MomentInput) => `${this.fromNow(val)}`,
+          sortable: true,
+        },
+      ],
     };
   },
   async created() {
@@ -47,6 +61,10 @@ export default defineComponent({
     fromNow(timestamp: moment.MomentInput) {
       return moment(timestamp).fromNow();
     },
+  },
+
+  updated() {
+    console.log('asdasda');
   },
 });
 </script>
