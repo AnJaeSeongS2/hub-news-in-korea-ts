@@ -1,14 +1,14 @@
 <template>
-  <news-table></news-table>
+  <news-table2></news-table2>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import NewsTable from './../layouts/NewsTable.vue';
+import NewsTable2 from '../layouts/NewsTable2.vue';
 
 export default defineComponent({
   name: 'router-view',
   components: {
-    NewsTable,
+    NewsTable2,
   },
 });
 </script>
