@@ -28,16 +28,12 @@
 import Parser = require('rss-parser');
 import moment = require('moment');
 import { ref, reactive, onMounted } from 'vue';
+import type Row from '../models/Row';
 // no use strict mode.
 // const parser = new Parser({ xml2js: { strict: false } });
 const parser = new Parser();
 moment.locale('ko-kr');
 const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
-
-interface Row {
-  title: string;
-  pubDate: moment.MomentInput;
-}
 
 export default {
   setup() {
